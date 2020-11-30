@@ -1,0 +1,67 @@
+[I][20-11-2020 20:30:58][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, c.fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 0 AND c.fechahora >= SYSDATE()
+[I][20-11-2020 20:30:58][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:31:49][Login/checkLogin]: SELECT id, nombre, rol FROM usuarios WHERE email = ? AND password = ? 
+[I][20-11-2020 20:31:49][Login/checkLogin]: ["f@gmail.com","c1f3a4569ba4b61b9c109bb4336bf84112f334781d721f0371aa3eb23c1ee679437bd30efb2bb99fede036fba169b6bfe16829e35a18d4ffebcf9aa2ab40efa7"]
+[I][20-11-2020 20:31:49][Login/login]: {"id":30,"nombre":"fer","rol":0,"success":true,"user":{"id":30,"nombre":"fer","rol":0}}
+[I][20-11-2020 20:31:54][Citas/citas_no_confirmadas]: {"id_user":30,"isAdmin":false}
+[I][20-11-2020 20:31:54][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, c.fechahora FROM citas c, usuarios u WHERE c.id_user = u.id AND u.id = ? AND c.confirmado = 1 AND c.fechahora >= SYSDATE() 
+[I][20-11-2020 20:31:54][Citas/citas_no_confirmadas]: [30]
+[I][20-11-2020 20:32:01][Citas/aniadir_cita]: INSERT INTO citas VALUES (?, ?, ?, 0) 
+[I][20-11-2020 20:32:01][Citas/aniadir_cita]: [11,30,"2020-11-26T20:31"]
+[I][20-11-2020 20:32:03][Citas/citas_no_confirmadas]: {"id_user":30,"isAdmin":false}
+[I][20-11-2020 20:32:03][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, c.fechahora FROM citas c, usuarios u WHERE c.id_user = u.id AND u.id = ? AND c.confirmado = 1 AND c.fechahora >= SYSDATE() 
+[I][20-11-2020 20:32:03][Citas/citas_no_confirmadas]: [30]
+[I][20-11-2020 20:32:07][Citas/aniadir_cita]: INSERT INTO citas VALUES (?, ?, ?, 0) 
+[I][20-11-2020 20:32:07][Citas/aniadir_cita]: [12,30,"2020-11-24T20:32"]
+[I][20-11-2020 20:32:08][Citas/citas_no_confirmadas]: {"id_user":30,"isAdmin":false}
+[I][20-11-2020 20:32:08][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, c.fechahora FROM citas c, usuarios u WHERE c.id_user = u.id AND u.id = ? AND c.confirmado = 1 AND c.fechahora >= SYSDATE() 
+[I][20-11-2020 20:32:08][Citas/citas_no_confirmadas]: [30]
+[I][20-11-2020 20:32:13][Citas/aniadir_cita]: INSERT INTO citas VALUES (?, ?, ?, 0) 
+[I][20-11-2020 20:32:13][Citas/aniadir_cita]: [13,30,"2020-11-28T20:32"]
+[I][20-11-2020 20:32:25][Login/checkLogin]: SELECT id, nombre, rol FROM usuarios WHERE email = ? AND password = ? 
+[I][20-11-2020 20:32:25][Login/checkLogin]: ["fpsico@gmail.com","c1f3a4569ba4b61b9c109bb4336bf84112f334781d721f0371aa3eb23c1ee679437bd30efb2bb99fede036fba169b6bfe16829e35a18d4ffebcf9aa2ab40efa7"]
+[I][20-11-2020 20:32:25][Login/login]: {"id":31,"nombre":"f","rol":1,"success":true,"user":{"id":31,"nombre":"f","rol":1}}
+[I][20-11-2020 20:32:27][Citas/citas_no_confirmadas]: {"id_user":31,"isAdmin":true}
+[I][20-11-2020 20:32:27][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, c.fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 1 AND c.fechahora >= SYSDATE()
+[I][20-11-2020 20:32:27][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:32:31][User/get_all_info_user]: SELECT * FROM usuarios WHERE id = ? 
+[I][20-11-2020 20:32:31][User/get_all_info_user]: [31]
+[I][20-11-2020 20:32:31][UserController/display_profile]: {"info_user":{"id":31,"nombre":"f","apellidos":"f","direccion":"f","ciudad":"f","cp":0,"fechanac":"2020-11-14","tfno":12345678,"email":"fpsico@gmail.com","password":"c1f3a4569ba4b61b9c109bb4336bf84112f334781d721f0371aa3eb23c1ee679437bd30efb2bb99fede036fba169b6bfe16829e35a18d4ffebcf9aa2ab40efa7","motivo":"sdf","rol":1},"profile":true}
+[I][20-11-2020 20:32:33][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, c.fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 0 AND c.fechahora >= SYSDATE()
+[I][20-11-2020 20:32:33][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:32:40][Citas/citas_no_confirmadas]: UPDATE citas SET confirmado = 1 WHERE id = ? 
+[I][20-11-2020 20:32:40][Citas/citas_no_confirmadas]: ["11"]
+[I][20-11-2020 20:32:40][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, c.fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 0 AND c.fechahora >= SYSDATE()
+[I][20-11-2020 20:32:40][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:32:41][Citas/citas_no_confirmadas]: UPDATE citas SET confirmado = 1 WHERE id = ? 
+[I][20-11-2020 20:32:41][Citas/citas_no_confirmadas]: ["12"]
+[I][20-11-2020 20:32:41][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, c.fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 0 AND c.fechahora >= SYSDATE()
+[I][20-11-2020 20:32:41][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:32:44][Citas/citas_no_confirmadas]: {"id_user":31,"isAdmin":true}
+[I][20-11-2020 20:32:44][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, c.fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 1 AND c.fechahora >= SYSDATE()
+[I][20-11-2020 20:32:44][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:35:21][Citas/citas_no_confirmadas]: {"id_user":31,"isAdmin":true}
+[I][20-11-2020 20:35:21][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, DATE_FORMAT(c.fechahora, '%d/%m/%Y %T') as fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 1 AND c.fechahora >= SYSDATE() ORDER BY c.fechahora 
+[I][20-11-2020 20:35:21][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:35:31][Citas/citas_no_confirmadas]: {"id_user":31,"isAdmin":true}
+[I][20-11-2020 20:35:31][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, DATE_FORMAT(c.fechahora, '%d/%m/%Y %T') as fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 1 AND c.fechahora >= SYSDATE() ORDER BY c.fechahora 
+[I][20-11-2020 20:35:31][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:35:34][User/get_all_info_user]: SELECT * FROM usuarios WHERE id = ? 
+[I][20-11-2020 20:35:34][User/get_all_info_user]: [31]
+[I][20-11-2020 20:35:34][UserController/display_profile]: {"info_user":{"id":31,"nombre":"f","apellidos":"f","direccion":"f","ciudad":"f","cp":0,"fechanac":"2020-11-14","tfno":12345678,"email":"fpsico@gmail.com","password":"c1f3a4569ba4b61b9c109bb4336bf84112f334781d721f0371aa3eb23c1ee679437bd30efb2bb99fede036fba169b6bfe16829e35a18d4ffebcf9aa2ab40efa7","motivo":"sdf","rol":1},"profile":true}
+[I][20-11-2020 20:35:41][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, DATE_FORMAT(c.fechahora, '%d/%m/%Y %T') as fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 0 AND c.fechahora >= SYSDATE() ORDER BY c.fechahora 
+[I][20-11-2020 20:35:41][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:38:15][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, DATE_FORMAT(c.fechahora, '%d/%m/%Y %T') as fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 0 AND c.fechahora >= SYSDATE() ORDER BY c.fechahora 
+[I][20-11-2020 20:38:15][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:38:17][Citas/citas_no_confirmadas]: {"id_user":31,"isAdmin":true}
+[I][20-11-2020 20:38:17][Citas/citas_no_confirmadas]: SELECT c.id as id_cita, DATE_FORMAT(c.fechahora, '%d/%m/%Y %T') as fechahora, u.id as id_paciente, u.tfno, u.nombre as nombre_paciente, u.apellidos as apellidos_paciente, u.email as email_paciente FROM citas c, usuarios u WHERE c.id_user = u.id AND c.confirmado = 1 AND c.fechahora >= SYSDATE() ORDER BY c.fechahora 
+[I][20-11-2020 20:38:17][Citas/citas_no_confirmadas]: []
+[I][20-11-2020 20:38:19][User/get_all_info_user]: SELECT id, nombre, apellidos, direccion, ciudad, cp, DATE_FORMAT(fechanac, '%d/%m/%Y %T'), tfno, email, password, motivo, rol FROM usuarios WHERE id = ? 
+[I][20-11-2020 20:38:19][User/get_all_info_user]: [31]
+[I][20-11-2020 20:38:19][UserController/display_profile]: {"info_user":{"id":31,"nombre":"f","apellidos":"f","direccion":"f","ciudad":"f","cp":0,"DATE_FORMAT(fechanac, '%d\/%m\/%Y %T')":"14\/11\/2020 00:00:00","tfno":12345678,"email":"fpsico@gmail.com","password":"c1f3a4569ba4b61b9c109bb4336bf84112f334781d721f0371aa3eb23c1ee679437bd30efb2bb99fede036fba169b6bfe16829e35a18d4ffebcf9aa2ab40efa7","motivo":"sdf","rol":1},"profile":true}
+[I][20-11-2020 20:38:34][User/get_all_info_user]: SELECT id, nombre, apellidos, direccion, ciudad, cp, DATE_FORMAT(fechanac, '%d/%m/%Y %T') as fechanac, tfno, email, password, motivo, rol FROM usuarios WHERE id = ? 
+[I][20-11-2020 20:38:34][User/get_all_info_user]: [31]
+[I][20-11-2020 20:38:34][UserController/display_profile]: {"info_user":{"id":31,"nombre":"f","apellidos":"f","direccion":"f","ciudad":"f","cp":0,"fechanac":"14\/11\/2020 00:00:00","tfno":12345678,"email":"fpsico@gmail.com","password":"c1f3a4569ba4b61b9c109bb4336bf84112f334781d721f0371aa3eb23c1ee679437bd30efb2bb99fede036fba169b6bfe16829e35a18d4ffebcf9aa2ab40efa7","motivo":"sdf","rol":1},"profile":true}
+[I][20-11-2020 20:38:41][User/get_all_info_user]: SELECT id, nombre, apellidos, direccion, ciudad, cp, DATE_FORMAT(fechanac, '%d/%m/%Y') as fechanac, tfno, email, password, motivo, rol FROM usuarios WHERE id = ? 
+[I][20-11-2020 20:38:41][User/get_all_info_user]: [31]
+[I][20-11-2020 20:38:41][UserController/display_profile]: {"info_user":{"id":31,"nombre":"f","apellidos":"f","direccion":"f","ciudad":"f","cp":0,"fechanac":"14\/11\/2020","tfno":12345678,"email":"fpsico@gmail.com","password":"c1f3a4569ba4b61b9c109bb4336bf84112f334781d721f0371aa3eb23c1ee679437bd30efb2bb99fede036fba169b6bfe16829e35a18d4ffebcf9aa2ab40efa7","motivo":"sdf","rol":1},"profile":true}
